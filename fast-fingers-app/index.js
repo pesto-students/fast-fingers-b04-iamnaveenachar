@@ -23,6 +23,7 @@ const scoreDisplay = document.querySelector('#score');
 const timeDisplay = document.querySelector('#time');
 const message = document.querySelector('#message');
 const seconds = document.querySelector('#seconds');
+console.log(seconds);
 
 const words = [
   'hat',
@@ -62,6 +63,9 @@ function init() {
   wordInput.addEventListener('input', startMatch);
   setInterval(countdown, 1000);
   setInterval(checkStatus, 50);
+  let player1 = window.sessionStorage.getItem('player1')
+  
+  console.log(player1)
 }
 
 // Start match
